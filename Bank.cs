@@ -1,6 +1,6 @@
 namespace Bank;
 
-// Define a class called Bank to implement a simple banking system
+// Original w3resources prompt: Define a class called Bank to implement a simple banking system
 
 public class Bank
 {
