@@ -4,6 +4,7 @@ namespace Bank;
 
 public class BloggingContext : DbContext
 {
+    public DbSet<User> Users { get; set; }
     public DbSet<Blog> Blogs { get; set; }
     public DbSet<Post> Posts { get; set; }
 
@@ -36,4 +37,14 @@ public class Post
 
     public int BlogId { get; set; }
     public Blog Blog { get; set; }
+}
+
+public class User
+{
+    public int UserId { get; set; }
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public string Password { get; set; }
+
+    public Blog Blog { get; } = new();
 }
