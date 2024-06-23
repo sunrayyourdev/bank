@@ -5,6 +5,7 @@ namespace Bank;
 public class Bank
 {
     public int BankId { get; set; }
+    
     public List<Customer> Customers { get; set; } = [];
     
     public void CreateAccount(string account_number, decimal initial_balance = 0)
