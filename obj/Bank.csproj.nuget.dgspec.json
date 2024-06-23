@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj": {}
+    "C:\\Users\\Coding\\Projects\\Bank\\Bank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj": {
+    "C:\\Users\\Coding\\Projects\\Bank\\Bank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj",
+        "projectUniqueName": "C:\\Users\\Coding\\Projects\\Bank\\Bank.csproj",
         "projectName": "Bank",
-        "projectPath": "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj",
-        "packagesPath": "C:\\Users\\xxrob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xxrob\\Coding\\C#\\Bank\\obj\\",
+        "projectPath": "C:\\Users\\Coding\\Projects\\Bank\\Bank.csproj",
+        "packagesPath": "C:\\Users\\Coding\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Coding\\Projects\\Bank\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\xxrob\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Coding\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
