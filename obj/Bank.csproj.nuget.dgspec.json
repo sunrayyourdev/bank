@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xxrob\\Coding\\C#\\Misc\\w3resources\\Bank\\Bank.csproj": {}
+    "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xxrob\\Coding\\C#\\Misc\\w3resources\\Bank\\Bank.csproj": {
+    "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xxrob\\Coding\\C#\\Misc\\w3resources\\Bank\\Bank.csproj",
+        "projectUniqueName": "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj",
         "projectName": "Bank",
-        "projectPath": "C:\\Users\\xxrob\\Coding\\C#\\Misc\\w3resources\\Bank\\Bank.csproj",
+        "projectPath": "C:\\Users\\xxrob\\Coding\\C#\\Bank\\Bank.csproj",
         "packagesPath": "C:\\Users\\xxrob\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xxrob\\Coding\\C#\\Misc\\w3resources\\Bank\\obj\\",
+        "outputPath": "C:\\Users\\xxrob\\Coding\\C#\\Bank\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xxrob\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,6 +42,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
