@@ -4,8 +4,8 @@ namespace Bank;
 
 public class BankContext : DbContext
 {
-    public DbSet<Bank> Bank { get; set; }
-    public DbSet<Customer> Customer { get; set; }
+    public DbSet<Bank> Banks { get; set; }
+    public DbSet<Customer> Customers { get; set; }
 
     public string DbPath { get; }
 
