@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Bank.Migrations
 {
     [DbContext(typeof(BankContext))]
-    [Migration("20240623001334_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240701175400_NewBankDb")]
+    partial class NewBankDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,59 +19,54 @@ namespace Bank.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.6");
 
-            modelBuilder.Entity("Bank.Blog", b =>
+            modelBuilder.Entity("Bank.Bank", b =>
                 {
-                    b.Property<int>("BlogId")
+                    b.Property<int>("BankId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Url")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("BlogId");
+                    b.HasKey("BankId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Banks");
                 });
 
-            modelBuilder.Entity("Bank.Post", b =>
+            modelBuilder.Entity("Bank.Customer", b =>
                 {
-                    b.Property<int>("PostId")
+                    b.Property<int>("CustomerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("BlogId")
+                    b.Property<decimal>("Balance")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("BankId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.HasKey("CustomerId");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.HasIndex("BankId");
 
-                    b.HasKey("PostId");
-
-                    b.HasIndex("BlogId");
-
-                    b.ToTable("Posts");
+                    b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("Bank.Post", b =>
+            modelBuilder.Entity("Bank.Customer", b =>
                 {
-                    b.HasOne("Bank.Blog", "Blog")
-                        .WithMany("Posts")
-                        .HasForeignKey("BlogId")
+                    b.HasOne("Bank.Bank", "Bank")
+                        .WithMany("Customers")
+                        .HasForeignKey("BankId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Blog");
+                    b.Navigation("Bank");
                 });
 
-            modelBuilder.Entity("Bank.Blog", b =>
+            modelBuilder.Entity("Bank.Bank", b =>
                 {
-                    b.Navigation("Posts");
+                    b.Navigation("Customers");
                 });
 #pragma warning restore 612, 618
         }
